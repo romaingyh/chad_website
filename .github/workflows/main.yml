@@ -1,0 +1,28 @@
+# Github actions to deploy website to ftp server
+name: deploy
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: prettier
+        run: npm run prettier
+
+      - name: tailwind
+        run: npm run tailwind
+
+      - name: Upload to FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.SERVER }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          local-dir: build
+          server-dir: /domains/gengod.fr/public_html/chad/

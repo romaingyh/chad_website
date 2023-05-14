@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chad App</title>
+    <meta name="description" content="Chad App" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav
+      class="sticky top-0 z-10 flex justify-between bg-white p-4 font-semibold tracking-tight md:px-16 xl:px-36"
+    >
+      <a href="#home">Logo</a>
+
+      <ul class="flex gap-4">
+        <li><a href="/">App Store</a></li>
+        <li><a href="/">Play Store</a></li>
+      </ul>
+    </nav>
+
+    <section
+      id="home"
+      class="flex flex-col items-center justify-center px-16 md:h-[calc(100vh-3rem)] md:flex-row md:justify-center md:gap-16 xl:gap-32"
+    >
+      <div class="mt-14 flex max-w-md flex-col gap-2 md:gap-6">
+        <h1 class="text-3xl font-semibold md:text-4xl lg:text-6xl">
+          Votre compagnon d'entraînement
+        </h1>
+
+        <p class="text-sm font-light md:text-base lg:text-lg">
+          Une interface claire et soignée pour faire vos séances, organiser vos
+          routines et suivre vos progrès.
+        </p>
+
+        <div
+          class="flex max-w-sm gap-4 self-center text-center text-white md:self-start"
+        >
+          <a
+            href="https://apps.apple.com/fr/app/projump/id1614219536?itsct=apps_box_badge&amp;itscg=30200"
+            class="flex-1"
+          >
+            <img
+              src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr?size=250x83&amp;releaseDate=1668124800"
+              alt="Download on the App Store"
+              class="h-full min-h-0"
+            />
+          </a>
+
+          <a
+            href="http://play.google.com/store/?pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            class="flex-1"
+          >
+            <img
+              alt="Disponible sur Google Play"
+              src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png"
+              class="h-full w-full"
+            />
+          </a>
+        </div>
+      </div>
+
+      <img
+        src="./assets/screenshots/home.jpeg"
+        alt="Chad app home page"
+        class="z-0 my-12 w-full max-w-[20rem] rounded-3xl shadow-2xl shadow-blue-300 drop-shadow-2xl lg:my-0 lg:w-1/3"
+      />
+    </section>
+
+    <section
+      class="flex flex-col items-center justify-center bg-gradient-to-br from-primary to-secondary px-16 lg:h-[calc(100vh-3rem)] lg:flex-row lg:justify-between lg:gap-16 xl:px-36"
+    >
+      <div class="mt-14 flex max-w-md flex-col gap-2 text-white lg:gap-6">
+        <h1 class="text-3xl font-semibold md:text-4xl lg:text-6xl">
+          Suis ton évolution sur le long terme
+        </h1>
+
+        <p class="text-sm font-light md:text-base lg:text-lg">
+          Pour analyser et comprendre tes progrès, toutes tes séries ainsi que
+          tes records personnels sont sauvegardés.
+        </p>
+        <p class="text-sm font-light md:text-base lg:text-lg">
+          Tu peux aussi entrer tes mensurations à suivre comme ton poids ou ton
+          taux de graisse.
+        </p>
+      </div>
+
+      <div
+        class="my-12 flex w-full max-w-[20rem] flex-col gap-12 lg:my-0 lg:max-w-lg lg:flex-row lg:justify-end xl:max-w-none"
+      >
+        <img
+          src="./assets/screenshots/exercises_evolution.jpeg"
+          alt="Chad app home page"
+          class="min-h-0 min-w-0 max-w-[20rem] flex-1 rounded-3xl shadow-2xl shadow-blue-300 drop-shadow-2xl"
+        />
+        <img
+          src="./assets/screenshots/measurements.jpeg"
+          alt="Chad app home page"
+          class="min-h-0 min-w-0 max-w-[20rem] flex-1 rounded-3xl shadow-2xl shadow-blue-300 drop-shadow-2xl"
+        />
+      </div>
+    </section>
+
+    <section
+      class="flex flex-col items-center justify-center px-16 md:h-[calc(100vh-3rem)] md:flex-row md:justify-center md:gap-16 xl:gap-32"
+    >
+      <div class="mt-14 flex max-w-md flex-col gap-2 md:order-2 lg:gap-6">
+        <h1 class="text-3xl font-semibold md:text-4xl lg:text-6xl">
+          Des fonctionnalités innovantes
+        </h1>
+
+        <p class="text-sm font-light md:text-base lg:text-lg">
+          Utilise des outils inédits comme l'avant/après pour voir ton évolution
+          physique.
+        </p>
+      </div>
+
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        lazyload
+        class="z-0 my-12 w-full max-w-[20rem] rounded-3xl shadow-2xl shadow-blue-300 drop-shadow-2xl md:order-1 lg:my-0 lg:w-1/3"
+      >
+        <source src="./assets/videos/before_after.mp4" type="video/mp4" />
+      </video>
+    </section>
+  </body>
+</html>
