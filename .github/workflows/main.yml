@@ -25,4 +25,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           local-dir: ./build/
-          server-dir: /domains/gengod.fr/public_html/chad/
+          server-dir: /domains/gengod.fr/public_html/virtus/

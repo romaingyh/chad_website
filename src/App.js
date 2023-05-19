@@ -1,16 +1,21 @@
+import React from "react";
+
 import home from "./assets/screenshots/home.jpeg";
 import measurements from "./assets/screenshots/measurements.jpeg";
 import exercises_evolution from "./assets/screenshots/exercises_evolution.jpeg";
 import before_after from "./assets/videos/before_after.mp4";
+import virtus_icon from "./assets/icons/virtus.svg";
 
 function App() {
   return (
-    <div classNameName="App">
+    <div className="App">
 
       <nav
-        className="sticky top-0 z-10 flex justify-between bg-white p-4 font-semibold tracking-tight md:px-16 xl:px-36"
+        className="sticky top-0 z-10 h-16 flex justify-between items-center bg-white font-semibold tracking-tight md:px-16 xl:px-36"
       >
-        <a href="#home">Logo</a>
+        <a href="#home" className="h-full">
+          <img src={virtus_icon} alt="Virtus logo" className="h-full" />
+        </a>
 
         <ul className="flex gap-4">
           <li><a href="/">App Store</a></li>
@@ -61,7 +66,7 @@ function App() {
 
         <img
           src={home}
-          alt="Chad app home page"
+          alt="Virtus app home page"
           className="z-0 my-12 w-full max-w-[20rem] rounded-3xl shadow-2xl shadow-blue-300 drop-shadow-2xl lg:my-0 lg:w-1/3"
         />
       </section>
@@ -84,17 +89,41 @@ function App() {
           </p>
         </div>
 
+        {/* <SegmentedControl
+          name="stats-carousel"
+          controlRef={useRef()}
+          segments={
+            [
+              {
+                value: "measurements",
+                label: "Mensurations",
+                ref: useRef(),
+              },
+              {
+                value: "exercises_evolution",
+                label: "Stats",
+                ref: useRef(),
+              },
+            ]
+          }
+          onChange={
+            (value, index) => {
+              console.log(value);
+            }
+          }
+        /> */}
+
         <div
           className="my-12 flex w-full max-w-[20rem] flex-col gap-12 lg:my-0 lg:max-w-lg lg:flex-row lg:justify-end xl:max-w-none"
         >
           <img
             src={exercises_evolution}
-            alt="Chad app home page"
+            alt="Application Virtus statistiques exercices"
             className="min-h-0 min-w-0 max-w-[20rem] flex-1 rounded-3xl shadow-2xl shadow-blue-300 drop-shadow-2xl"
           />
           <img
             src={measurements}
-            alt="Chad app home page"
+            alt="Application Virtus mensurations"
             className="min-h-0 min-w-0 max-w-[20rem] flex-1 rounded-3xl shadow-2xl shadow-blue-300 drop-shadow-2xl"
           />
         </div>
@@ -119,10 +148,9 @@ function App() {
           muted
           loop
           playsInline
-          lazyload="true"
-          src={before_after}
           className="z-0 my-12 w-full max-w-[20rem] rounded-3xl shadow-2xl shadow-blue-300 drop-shadow-2xl md:order-1 lg:my-0 lg:w-1/3"
         >
+          <source src={before_after} type="video/mp4" />
         </video>
       </section>
 
